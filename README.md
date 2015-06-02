@@ -1,4 +1,4 @@
-Jack demo https://jackdougherty.github.io/leaflet-realtime/
+Jack demo https://jackdougherty.github.io/leaflet-realtime/examples/
 
 # Leaflet Realtime
 
