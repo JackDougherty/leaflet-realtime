@@ -19,14 +19,15 @@ source = function(leaflet_success, leaflet_error){
 		busses.push(coordinates_to_GEOJSON(bus_data.entity[i].vehicle.position));
 	}
 	console.log(busses);
+	console.log("YELL");
     leaflet_success(busses);
 }
 
-real_source = {
-        url: '//wanderdrone.appspot.com/',
-        crossOrigin: true,
-        type: 'json'
-}
+// real_source = {
+//         url: '//wanderdrone.appspot.com/',
+//         crossOrigin: true,
+//         type: 'json'
+// }
 
 var map = L.map('map'),
     realtime = L.realtime(source, {
