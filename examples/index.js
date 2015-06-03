@@ -16,7 +16,7 @@ var coordinates_to_GEOJSON = function(coordinates){
 source = function(leaflet_success, leaflet_error){
 	busses = [];
 	for (i = 0; i < 3; i++){
-		busses.push(coordinates_to_GEOJSON(bus_data.entity[i].vehicle.position);
+		busses.push(coordinates_to_GEOJSON(bus_data.entity[i].vehicle.position));
 	}
     leaflet_success(busses);
 }
