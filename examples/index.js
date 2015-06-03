@@ -4,12 +4,13 @@ var coordinates_to_GEOJSON = function(coordinates){
 	coords_array = $.map(coordinates, function(v) {
 		return v;
 	});
+	coords_array.reverse();
 
 	return {
 		"geometry":
 			{"type": "Point", "coordinates": coords_array},
 		"type": "Feature", "properties": {}
-	}
+	};
 }
 
 source = function(leaflet_success, leaflet_error){
