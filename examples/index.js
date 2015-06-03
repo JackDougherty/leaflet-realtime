@@ -1,7 +1,13 @@
-source = function(success, error){
-    success(
-        {"geometry": {"type": "Point", "coordinates": [138.0092102571426, -34.651298292445304]}, "type": "Feature", "properties": {}}
-        );
+source = function(leaflet_success, leaflet_error){
+  $.ajax({
+    url: "//65.213.12.244/realtimefeed/vehicle/vehiclepositions.json",
+    dataType: "json",
+    success: function(data){
+      console.log(
+        data.entity[0].vehicle.position
+      );
+    }
+  });
 }
 
 real_source = {
