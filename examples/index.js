@@ -1,6 +1,6 @@
 source = function(leaflet_success, leaflet_error){
   $.ajax({
-    url: "//65.213.12.244/realtimefeed/vehicle/vehiclepositions.json",
+    url: "http://65.213.12.244/realtimefeed/vehicle/vehiclepositions.json",
     dataType: "json",
     success: function(data){
       console.log(
