@@ -1,6 +1,6 @@
 var map = L.map('map'),
     realtime = L.realtime({
-        url: '//65.213.12.244/realtimefeed/vehicle/vehiclepositions.json',
+        url: '//wanderdrone.appspot.com/',
         crossOrigin: true,
         type: 'json'
     }, {
