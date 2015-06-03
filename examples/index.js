@@ -18,7 +18,7 @@ real_source = {
 
 var map = L.map('map'),
     realtime = L.realtime(source, {
-        interval: 1 * 1000
+        interval: 10 * 1000
     }).addTo(map);
 
 L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
