@@ -1,10 +1,10 @@
 var map = L.map('map'),
     realtime = L.realtime({
-        url: 'https://wanderdrone.appspot.com/',
+        url: 'http://65.213.12.244/realtimefeed/vehicle/vehiclepositions.json',
         crossOrigin: true,
         type: 'json'
     }, {
-        interval: 3 * 1000
+        interval: 6 * 1000
     }).addTo(map);
 
 L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
@@ -12,5 +12,5 @@ L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
 }).addTo(map);
 
 realtime.on('update', function() {
-    map.fitBounds(realtime.getBounds(), {maxZoom: 3});
+    map.fitBounds(realtime.getBounds(), {maxZoom: 15});
 });
