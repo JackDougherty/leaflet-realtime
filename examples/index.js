@@ -1,6 +1,6 @@
 var map = L.map('map'),
     realtime = L.realtime({
-        url: 'http://65.213.12.244/realtimefeed/vehicle/vehiclepositions.json',
+        url: '//65.213.12.244/realtimefeed/vehicle/vehiclepositions.json',
         crossOrigin: true,
         type: 'json'
     }, {
