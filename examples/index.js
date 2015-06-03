@@ -18,6 +18,7 @@ source = function(leaflet_success, leaflet_error){
 	for (i = 0; i < 3; i++){
 		busses.push(coordinates_to_GEOJSON(bus_data.entity[i].vehicle.position));
 	}
+	console.log(busses);
     leaflet_success(busses);
 }
 
@@ -37,5 +38,5 @@ L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
 }).addTo(map);
 
 realtime.on('update', function() {
-    map.fitBounds(realtime.getBounds(), {maxZoom: 5});
+    map.fitBounds(realtime.getBounds(), {maxZoom: 11});
 });
