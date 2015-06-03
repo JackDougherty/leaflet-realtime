@@ -12,5 +12,5 @@ L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
 }).addTo(map);
 
 realtime.on('update', function() {
-    map.fitBounds(realtime.getBounds(), {maxZoom: 15});
+    map.fitBounds(realtime.getBounds(), {maxZoom: 5});
 });
