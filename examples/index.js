@@ -7,9 +7,13 @@ var coordinates_to_GEOJSON = function(coordinates){
 	coords_array.reverse();
 
 	return {
+		"type": "Feature",
 		"geometry":
-			{"type": "Point", "coordinates": coords_array},
-		"type": "Feature", "properties": {}
+			{
+				"type": "Point",
+				"coordinates": coords_array
+			},
+		"properties": {}
 	};
 }
 
@@ -18,9 +22,10 @@ source = function(leaflet_success, leaflet_error){
 	for (i = 0; i < 3; i++){
 		busses.push(coordinates_to_GEOJSON(bus_data.entity[i].vehicle.position));
 	}
-	console.log(busses);
-	console.log("YELL");
-    leaflet_success(busses);
+    leaflet_success({
+    	"type": "FeatureCollection",
+    	"features": busses
+    });
 }
 
 // real_source = {
