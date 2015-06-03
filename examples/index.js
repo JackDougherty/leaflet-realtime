@@ -1,13 +1,10 @@
 source = function(leaflet_success, leaflet_error){
-  $.ajax({
-    url: "http://65.213.12.244/realtimefeed/vehicle/vehiclepositions.json",
-    dataType: "json",
-    success: function(data){
+  $.getJSON("http://65.213.12.244/realtimefeed/vehicle/vehiclepositions.json?callback=?",
+    function(data){
       console.log(
         data.entity[0].vehicle.position
       );
-    }
-  });
+    });
 }
 
 real_source = {
