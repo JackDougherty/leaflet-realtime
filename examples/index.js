@@ -1,9 +1,17 @@
-var map = L.map('map'),
-    realtime = L.realtime({
+source = function(success, error){
+    success(
+        {"geometry": {"type": "Point", "coordinates": [138.0092102571426, -34.651298292445304]}, "type": "Feature", "properties": {}}
+        );
+}
+
+real_source = {
         url: '//wanderdrone.appspot.com/',
         crossOrigin: true,
         type: 'json'
-    }, {
+}
+
+var map = L.map('map'),
+    realtime = L.realtime(source, {
         interval: 6 * 1000
     }).addTo(map);
 
