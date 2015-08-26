@@ -627,7 +627,7 @@ L.Realtime = L.GeoJSON.extend({
 
     options: {
         start: true,
-        interval: 60 * 1000,
+        interval: 600 * 1000,
         getFeatureId: function(f) {
             return f.properties.id;
         },
