@@ -36,4 +36,3 @@ realtime.on('update', function(e) {
     Object.keys(e.enter).forEach(bindFeaturePopup);
     Object.keys(e.update).forEach(updateFeaturePopup);
 });
-});
