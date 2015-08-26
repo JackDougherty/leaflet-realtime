@@ -16,7 +16,7 @@ L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(map);
 
-var source = new EventSource('http://65.213.12.244/realtimefeed/vehicle/vehiclepositions.json');
+var source = new EventSource('//65.213.12.244/realtimefeed/vehicle/vehiclepositions.json');
 source.addEventListener('add', update);
 source.addEventListener('change', update);
 source.addEventListener('remove', remove);
